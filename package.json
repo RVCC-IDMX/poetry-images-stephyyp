@@ -1,0 +1,28 @@
+{
+  "name": "poetry-interpretation-stephyyp",
+  "version": "1.0.0",
+  "description": "Welcome to your Poetry Interpretation project! This project will teach you professional web development workflows using GitHub Issues as specifications.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write 'src/**/*.{html,scss,css}'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RVCC-IDMX/poetry-interpretation-stephyyp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/RVCC-IDMX/poetry-interpretation-stephyyp/issues"
+  },
+  "homepage": "https://github.com/RVCC-IDMX/poetry-interpretation-stephyyp#readme",
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
