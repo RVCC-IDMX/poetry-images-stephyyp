@@ -24,5 +24,8 @@
   "homepage": "https://github.com/RVCC-IDMX/poetry-interpretation-stephyyp#readme",
   "devDependencies": {
     "prettier": "^3.6.2"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3"
   }
 }
