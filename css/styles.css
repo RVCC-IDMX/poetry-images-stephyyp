@@ -17,18 +17,18 @@ body {
   }
   
   article img {
-    opacity: 0; /* Ensure images start hidden for fade-in effect */
-    transition: opacity 1.5s ease-in-out;
+    /* opacity: 0; -- REMOVED: This was making images invisible */
+    /* transition: opacity 1.5s ease-in-out; -- REMOVED: No JavaScript to trigger this */
     justify-self: center;
     max-width: 100%;
     height: auto;
     border: 2px solid #333333; /* dark gray */
     border-radius: 8px;
   }
-  
-  body.loaded article img {
+
+  /* body.loaded article img {
     opacity: 1;
-  }
+  } -- REMOVED: No JavaScript adds the 'loaded' class */
   
   article p {
     margin-bottom: 1rem;

@@ -1,43 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hope is the Thing with Feathers - Poetry Project</title>
 
+    <!-- Performance optimization for Cloudinary -->
+    <link rel="preconnect" href="https://res.cloudinary.com" />
 
-<head>
-    <link rel="stylesheet" href="css/styles.css">
-    <meta charset="UTF-8">
-    <title>Emily Dickinson Poem</title>
-</head>
-<header>
-    <h1> Poetry Interpretation Project  </h1>
-    
-  </header>
- 
-  <main>
-    <article>
-      <h2>Hope is the Thing With Feathers</h2>
-      <p>“Hope” is the thing with feathers -<br>
-         That perches in the soul -<br>
-         And sings the tune without the words -<br>
-         And never stops - at all -</p>
-      
-      <p>And sweetest - in the Gale - is heard -<br>
-         And sore must be the storm -<br>
-         That could abash the little Bird<br>
-         That kept so many warm -</p>
-  
-      <p>I've heard it in the chillest land -<br>
-         And on the strangest Sea -<br>
-         Yet - never - in Extremity,<br>
-         It asked a crumb - of me.</p>
-      
-      <!-- Example image added -->
-      <img src="images/feather.jpg" alt="feather">
-      <img src="images/bird.jpg" alt="bird">
-      
-    </article>
-  </main>
-  
-  <footer>
-    <p>Project by Stephanie</p>
-  </footer>
-  </html>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Poetry Interpretation Project</h1>
+    </header>
+
+    <main>
+      <article>
+        <h2>Hope is the Thing with Feathers</h2>
+        <p><em>by Emily Dickinson</em></p>
+
+        <p>
+          "Hope" is the thing with feathers -<br />
+          That perches in the soul -<br />
+          And sings the tune without the words -<br />
+          And never stops - at all -
+        </p>
+
+        <img
+          src="https://res.cloudinary.com/cynthia-teeters/image/upload/f_auto,q_auto,w_600/v1762790991/steph/feather.jpg"
+          srcset="
+            https://res.cloudinary.com/cynthia-teeters/image/upload/f_auto,q_auto,w_400/v1762790991/steph/feather.jpg 400w,
+            https://res.cloudinary.com/cynthia-teeters/image/upload/f_auto,q_auto,w_600/v1762790991/steph/feather.jpg 600w,
+            https://res.cloudinary.com/cynthia-teeters/image/upload/f_auto,q_auto,w_900/v1762790991/steph/feather.jpg 900w"
+          sizes="(max-width: 600px) 100vw, 50vw"
+          alt="A delicate white feather symbolizing hope that perches in the soul"
+          loading="lazy" />
+
+        <p>
+          And sweetest - in the Gale - is heard -<br />
+          And sore must be the storm -<br />
+          That could abash the little Bird<br />
+          That kept so many warm -
+        </p>
+
+        <img
+          src="https://res.cloudinary.com/cynthia-teeters/image/upload/f_auto,q_auto,w_600/v1762790994/steph/bird.jpg"
+          srcset="
+            https://res.cloudinary.com/cynthia-teeters/image/upload/f_auto,q_auto,w_400/v1762790994/steph/bird.jpg 400w,
+            https://res.cloudinary.com/cynthia-teeters/image/upload/f_auto,q_auto,w_600/v1762790994/steph/bird.jpg 600w,
+            https://res.cloudinary.com/cynthia-teeters/image/upload/f_auto,q_auto,w_900/v1762790994/steph/bird.jpg 900w"
+          sizes="(max-width: 600px) 100vw, 50vw"
+          alt="A small songbird representing hope that never stops singing"
+          loading="lazy" />
+
+        <p>
+          I've heard it in the chillest land -<br />
+          And on the strangest Sea -<br />
+          Yet - never - in Extremity,<br />
+          It asked a crumb - of me.
+        </p>
+      </article>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Poetry Project by Stephanie</p>
+    </footer>
+  </body>
+</html>
