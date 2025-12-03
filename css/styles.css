@@ -1,54 +1,236 @@
+/* ============================================================
+   FONT DECLARATIONS - Self-hosted WOFF2 fonts
+   ============================================================ */
+
+/* Playfair Display - Variable font for headings (elegant, poetic) */
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../fonts/PlayfairDisplay-Variable.woff2") format("woff2-variations");
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Lora - Variable serif font for body text (warm, literary feel) */
+@font-face {
+  font-family: "Lora";
+  src: url("../fonts/Lora-Variable.woff2") format("woff2-variations");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ============================================================
+   CSS CUSTOM PROPERTIES - Systematic sizing relationships
+   ============================================================ */
+
+:root {
+  /* Base sizing using clamp() - minimum 16px equivalent */
+  --size-base: clamp(1rem, 2vw, 1.25rem);
+  
+  /* Heading sizes with clamp() - fluid scaling */
+  --size-h1: clamp(2.5rem, 5vw, 4rem);
+  --size-h2: clamp(2rem, 4vw, 3rem);
+  --size-h3: clamp(1.5rem, 3vw, 2.25rem);
+  
+  /* Body text sizing */
+  --size-p: clamp(1rem, 1.5vw, 1.125rem);
+  --size-small: clamp(0.875rem, 1.2vw, 1rem);
+  
+  /* Line height for readability */
+  --line-height-tight: 1.4;
+  --line-height-normal: 1.6;
+  --line-height-loose: 1.8;
+  
+  /* Colors with accessible contrast ratios (WCAG AA 4.5:1) */
+  --color-text: #1a1a1a; /* 18.5:1 contrast with white background */
+  --color-text-secondary: #333333; /* 12.6:1 contrast */
+  --color-bg: #fffbe6;
+  --color-border: #1a1a1a;
+  --color-accent: #b33a3a;
+  
+  /* Spacing */
+  --spacing-xs: clamp(0.25rem, 1vw, 0.5rem);
+  --spacing-sm: clamp(0.5rem, 1.5vw, 1rem);
+  --spacing-md: clamp(1rem, 2vw, 1.5rem);
+  --spacing-lg: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+/* ============================================================
+   GLOBAL STYLES
+   ============================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* Base font size ensures 16px minimum (1rem = 16px) */
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
 body {
-    font-family: Georgia, serif;
-    font-size: 18px;
-    line-height: 1.6;
-    background-color: #fffbe6; /* very light yellow */
-    color: #333333; /* dark gray */
+  font-family: "Lora", serif;
+  font-size: var(--size-p);
+  font-weight: 400;
+  line-height: var(--line-height-normal);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  overflow-x: hidden;
+}
+
+/* ============================================================
+   TYPOGRAPHY - Headings
+   ============================================================ */
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: var(--size-h1);
+  font-weight: 700;
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-text);
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-size: var(--size-h2);
+  font-weight: 600;
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--spacing-md);
+  margin-top: var(--spacing-md);
+  color: var(--color-text);
+}
+
+h3 {
+  font-family: "Playfair Display", serif;
+  font-size: var(--size-h3);
+  font-weight: 500;
+  line-height: var(--line-height-tight);
+  color: var(--color-text);
+}
+
+/* ============================================================
+   TYPOGRAPHY - Body and Lists
+   ============================================================ */
+
+p {
+  font-size: var(--size-p);
+  margin-bottom: var(--spacing-md);
+  line-height: var(--line-height-normal);
+}
+
+em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+strong {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+small {
+  font-size: var(--size-small);
+}
+
+/* ============================================================
+   HEADER AND FOOTER
+   ============================================================ */
+
+header {
+  background-color: var(--color-bg);
+  padding: var(--spacing-lg) var(--spacing-md);
+  border-bottom: 2px solid var(--color-border);
+  margin-bottom: var(--spacing-lg);
+}
+
+header h1 {
+  margin-bottom: 0;
+  color: var(--color-accent);
+}
+
+footer {
+  background-color: var(--color-bg);
+  padding: var(--spacing-md);
+  text-align: center;
+  border-top: 2px solid var(--color-border);
+  margin-top: var(--spacing-lg);
+  font-size: var(--size-small);
+  color: var(--color-text-secondary);
+}
+
+/* ============================================================
+   MAIN CONTENT LAYOUT
+   ============================================================ */
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-lg) var(--spacing-md);
+}
+
+article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  align-items: start;
+}
+
+article img {
+  justify-self: center;
+  max-width: 100%;
+  height: auto;
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  margin: var(--spacing-md) 0;
+}
+
+article p {
+  text-align: justify;
+  hyphens: auto;
+}
+
+article p:nth-of-type(2) {
+  grid-column: span 2;
+  text-align: center;
+  margin: var(--spacing-lg) 0;
+  font-style: italic;
+  color: var(--color-text-secondary);
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN
+   ============================================================ */
+
+@media (max-width: 900px) {
+  article {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  article p:nth-of-type(2) {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: var(--spacing-md);
+  }
+
+  main {
+    padding: var(--spacing-md);
   }
 
   article {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: start;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
-  }
-  
-  article img {
-    /* opacity: 0; -- REMOVED: This was making images invisible */
-    /* transition: opacity 1.5s ease-in-out; -- REMOVED: No JavaScript to trigger this */
-    justify-self: center;
-    max-width: 100%;
-    height: auto;
-    border: 2px solid #333333; /* dark gray */
-    border-radius: 8px;
+    gap: var(--spacing-md);
   }
 
-  /* body.loaded article img {
-    opacity: 1;
-  } -- REMOVED: No JavaScript adds the 'loaded' class */
-  
-  article p {
-    margin-bottom: 1rem;
-    text-align: justify;
+  h1 {
+    color: var(--color-accent);
   }
-  
-  article p:nth-of-type(2) {
-    grid-column: span 2;
-    text-align: center;
-    margin: 2rem 0; /* Add spacing above and below */
-    font-style: italic; /* Optional: Add emphasis */
-  }
-  
-  @media (max-width: 600px) {
-    body {
-      margin: 1rem;
-    }
-  
-    h1 {
-      font-size: 1.5rem;
-      color: #b33a3a; 
-    }
-  }
+}
