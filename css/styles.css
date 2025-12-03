@@ -5,8 +5,8 @@
 /* Playfair Display - Variable font for headings (elegant, poetic) */
 @font-face {
   font-family: "Playfair Display";
-  src: url("../fonts/PlayfairDisplay-Variable.woff2") format("woff2-variations");
-  font-weight: 400 900;
+  src: url("../fonts/playfair-display-normal-400.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -14,8 +14,8 @@
 /* Lora - Variable serif font for body text (warm, literary feel) */
 @font-face {
   font-family: "Lora";
-  src: url("../fonts/Lora-Variable.woff2") format("woff2-variations");
-  font-weight: 400 700;
+  src: url("../fonts/lora-normal-400.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -89,7 +89,7 @@ body {
 h1 {
   font-family: "Playfair Display", serif;
   font-size: var(--size-h1);
-  font-weight: 700;
+  font-weight: 400;
   line-height: var(--line-height-tight);
   margin-bottom: var(--spacing-lg);
   color: var(--color-text);
@@ -98,7 +98,7 @@ h1 {
 h2 {
   font-family: "Playfair Display", serif;
   font-size: var(--size-h2);
-  font-weight: 600;
+  font-weight: 400;
   line-height: var(--line-height-tight);
   margin-bottom: var(--spacing-md);
   margin-top: var(--spacing-md);
@@ -108,7 +108,7 @@ h2 {
 h3 {
   font-family: "Playfair Display", serif;
   font-size: var(--size-h3);
-  font-weight: 500;
+  font-weight: 400;
   line-height: var(--line-height-tight);
   color: var(--color-text);
 }
